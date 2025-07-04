@@ -1,0 +1,9 @@
+C:\Users\49433586\TPNoNum_Wolman_Abreu\obj\Debug\net8.0\TPNoNum_Wolman_Abreu.csproj.AssemblyReference.cache
+C:\Users\49433586\TPNoNum_Wolman_Abreu\obj\Debug\net8.0\TPNoNum_Wolman_Abreu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\49433586\TPNoNum_Wolman_Abreu\obj\Debug\net8.0\TPNoNum_Wolman_Abreu.AssemblyInfoInputs.cache
+C:\Users\49433586\TPNoNum_Wolman_Abreu\obj\Debug\net8.0\TPNoNum_Wolman_Abreu.AssemblyInfo.cs
+C:\Users\49433586\TPNoNum_Wolman_Abreu\obj\Debug\net8.0\TPNoNum_Wolman_Abreu.csproj.CoreCompileInputs.cache
+C:\Users\49433586\TPNoNum_Wolman_Abreu\obj\Debug\net8.0\TPNoNum_Wolman_Abreu.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\49433586\TPNoNum_Wolman_Abreu\obj\Debug\net8.0\TPNoNum_Wolman_Abreu.RazorAssemblyInfo.cache
+C:\Users\49433586\TPNoNum_Wolman_Abreu\obj\Debug\net8.0\TPNoNum_Wolman_Abreu.RazorAssemblyInfo.cs
+C:\Users\49433586\TPNoNum_Wolman_Abreu\obj\Debug\net8.0\TPNoNum_Wolman_Abreu.sourcelink.json

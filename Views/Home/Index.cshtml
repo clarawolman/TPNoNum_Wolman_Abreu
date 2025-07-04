@@ -5,12 +5,12 @@
 <div>
     <h1>Inicie sesión para comenzar</h1>
     <form method="post" action = "Login.html">
-        Nombre de Usuario: <input type="text" name = "username" placeholder = "Ingresar usuario" required/><br/>
-        Password: <input type="password" name = "contraseña" required/><br/>
-        DNI: <input type="text" name="dni" placeholder="12345678" required/> <br/>
-        Teléfono: <input type="text" name="telefono" placeholder="11 1234-5678" required/> <br/>
-        Fecha de nacimiento: <input type="date" name="nacimiento" required/> <br/>
-        Hobby: <input type="text" name="hobby" required/> <br/>
-        Cantante favorito: <input type="text" name="cantante" placeholder="TINI" required/> <br/>
+        Nombre de Usuario:<input type="text" name = "username" placeholder = "Ingresar usuario" required/><br/>
+        Password:<input type="password" name = "contraseña" required/><br/>
+        <input type="submit" value="Ingresar" />
+
     </form>
+    @if (ViewBag.Error != null) {
+            <p style="color:red;">@ViewBag.Error</p>
+    }
 </div>

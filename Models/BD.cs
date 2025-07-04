@@ -3,20 +3,28 @@ using Dapper;
 
 namespace try_catch_poc.Models;
 
-class BD
+public static class BD
 {
-    public string 
-    public List<Integrante> LevantarIntegrante() {
-        List <Integrante> integrantes = new List<Integrante>();
-        using(SqlConnection connection = new SqlConnection(_connectionString)) {
-            string query  "SELECT * FROM Patentes";
-            patentes = connection.Query<Patente>(query).ToList();
-        }
-        return patentes;
-    }
-    public class Patente 
+    private static string _connectionString = @"Server=localhost;DataBase=NombreBase;Integrated Security=True;TrustServerCertificate=True;";
+
+    public static List<Integrante> LevantarIntegrante()
     {
-        public string Matricula {get; set;}
-        public DateTime FechaCompra{get;set;}
+        List<Integrante> integrantes = new List<Integrante>();
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT * FROM Integrante";
+            integrantes = connection.Query<Integrante>(query).ToList();
+        }
+        return integrantes;
+    }
+    public static Integrante BuscarIntegrante(string usuario, string password)
+    {
+        Integrante newIntegrante = null;
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string sql = "SELECT * FROM Integrantes WHERE nombreUsuario = @usuario AND password = @password";
+            newIntegrante = connection.QueryFirstOrDefault<Integrante>(sql, new { usuario, password });
+        }
+        return newIntegrante;
     }
 }

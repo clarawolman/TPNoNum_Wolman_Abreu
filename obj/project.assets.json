@@ -1699,23 +1699,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\49359853\\.nuget\\packages\\": {},
+    "C:\\Users\\49433586\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\2025\\prog\\TPNoNum_Wolman_Abreu\\TPNoNum_Wolman_Abreu\\TPNoNum_Wolman_Abreu.csproj",
+      "projectUniqueName": "C:\\Users\\49433586\\TPNoNum_Wolman_Abreu\\TPNoNum_Wolman_Abreu.csproj",
       "projectName": "TPNoNum_Wolman_Abreu",
-      "projectPath": "Z:\\2025\\prog\\TPNoNum_Wolman_Abreu\\TPNoNum_Wolman_Abreu\\TPNoNum_Wolman_Abreu.csproj",
-      "packagesPath": "C:\\Users\\49359853\\.nuget\\packages\\",
-      "outputPath": "Z:\\2025\\prog\\TPNoNum_Wolman_Abreu\\TPNoNum_Wolman_Abreu\\obj\\",
+      "projectPath": "C:\\Users\\49433586\\TPNoNum_Wolman_Abreu\\TPNoNum_Wolman_Abreu.csproj",
+      "packagesPath": "C:\\Users\\49433586\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\49433586\\TPNoNum_Wolman_Abreu\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\49359853\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\49433586\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
