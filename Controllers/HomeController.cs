@@ -1,6 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using TPNoNum_Wolman_Abreu.Models;
+using try_catch_poc.Models;
+
 
 namespace TPNoNum_Wolman_Abreu.Controllers;
 
@@ -17,16 +19,16 @@ public class HomeController : Controller
     }
     public IActionResult Ingresar(string usuario, string password)
     {
-        Integrante integrante = BD.BuscarIntegrante();
+        Integrante integrante = BD.BuscarIntegrante(usuario, password);
         if (integrante != null)
         {
-            ViewBag.NombreUsuario = integrante.nombreUsuario;
+            ViewBag.usuario = integrante.usuario;
             ViewBag.DNI = integrante.DNI;
             ViewBag.Telefono = integrante.telefono;
             ViewBag.FechaNacimiento = integrante.fechaNacimiento.ToShortDateString();
             ViewBag.Hobby = integrante.hobby;
             ViewBag.CantanteFav = integrante.cantanteFav;
-            return View("Integrantes");
+            return View("Integrantes"); // 
         }
         else
         {
@@ -34,4 +36,5 @@ public class HomeController : Controller
             return View("Index");
         }
     }
+
 }

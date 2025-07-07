@@ -5,7 +5,7 @@ namespace try_catch_poc.Models;
 
 public static class BD
 {
-    private static string _connectionString = @"Server=localhost;DataBase=NombreBase;Integrated Security=True;TrustServerCertificate=True;";
+    private static string _connectionString = @"Server=localhost;DataBase=TP;Integrated Security=True;TrustServerCertificate=True;";
 
     public static List<Integrante> LevantarIntegrante()
     {
@@ -22,7 +22,7 @@ public static class BD
         Integrante newIntegrante = null;
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Integrantes WHERE nombreUsuario = @usuario AND password = @password";
+            string sql = "SELECT * FROM Integrantes WHERE usuario = @usuario AND password = @password";
             newIntegrante = connection.QueryFirstOrDefault<Integrante>(sql, new { usuario, password });
         }
         return newIntegrante;

@@ -1,14 +1,14 @@
 using System.Runtime.CompilerServices;
 
-class Integrante
+public class Integrante
 {
-    public  string nombreUsuario { get; private set; }
-    public  string password {get; private set;}
-    public  string DNI { get; private set; }
-    public  string telefono { get; private set; }
-    public  DateTime fechaNacimiento { get; private set; }
-    public  string hobby { get; private set; }
-    public  string cantanteFav { get; private set; }
+    public  string usuario { get; set; }
+    public  string password {get; set;}
+    public  string DNI { get; set; }
+    public  string telefono { get; set; }
+    public  DateTime fechaNacimiento { get; set; }
+    public  string hobby { get; set; }
+    public  string cantanteFav { get; set; }
 
 }
 
