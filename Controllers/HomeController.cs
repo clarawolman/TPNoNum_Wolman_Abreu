@@ -14,7 +14,8 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-    public IActionResult Index() {
+    public IActionResult Index()
+    {
         return View();
     }
     public IActionResult Ingresar(string usuario, string password)
@@ -22,19 +23,33 @@ public class HomeController : Controller
         Integrante integrante = BD.BuscarIntegrante(usuario, password);
         if (integrante != null)
         {
-            ViewBag.usuario = integrante.usuario;
-            ViewBag.DNI = integrante.DNI;
-            ViewBag.Telefono = integrante.telefono;
-            ViewBag.FechaNacimiento = integrante.fechaNacimiento.ToShortDateString();
-            ViewBag.Hobby = integrante.hobby;
-            ViewBag.CantanteFav = integrante.cantanteFav;
-            return View("Integrantes"); // 
+            HttpContext.Session.SetString("usuario", integrante.usuario);
+            HttpContext.Session.SetString("DNI", integrante.DNI.ToString());
+            HttpContext.Session.SetString("Telefono", integrante.telefono);
+            HttpContext.Session.SetString("FechaNacimiento", integrante.fechaNacimiento.ToShortDateString());
+            HttpContext.Session.SetString("Hobby", integrante.hobby);
+            HttpContext.Session.SetString("CantanteFav", integrante.cantanteFav);
+            return RedirectToAction("Integrantes"); // 
         }
         else
         {
             ViewBag.Error = "Usuario o contraseña no válidos.";
             return View("Index");
         }
+    }
+    public IActionResult Integrantes()
+    {
+        ViewBag.usuario = HttpContext.Session.GetString("usuario");
+        ViewBag.DNI = HttpContext.Session.GetString("DNI");
+        ViewBag.Telefono = HttpContext.Session.GetString("Telefono");
+        ViewBag.FechaNacimiento = HttpContext.Session.GetString("FechaNacimiento");
+        ViewBag.Hobby = HttpContext.Session.GetString("Hobby");
+        ViewBag.CantanteFav = HttpContext.Session.GetString("CantanteFav");
+        if (string.IsNullOrEmpty(ViewBag.usuario))
+        {
+            return RedirectToAction("Index");
+        }
+        return View();
     }
 
 }
